@@ -1,3 +1,10 @@
+package com.example.demo.model;
+
+import java.io.Serializable;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+
 @Document(indexName = "index", type = "greetings")
 public class Greeting implements Serializable {
 	

@@ -1,3 +1,15 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.apache.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.model.Greeting;
+import com.example.demo.service.GreetingService;
+
 @RestController
 @RequestMapping("/api")
 public class GreetingController {
