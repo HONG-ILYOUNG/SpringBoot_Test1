@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.thymeleaf.expression.Lists;
-// import com.google.common.collect.Lists; ??
+
 import com.example.demo.model.Greeting;
 import com.example.demo.repository.GreetingRepository;
+import com.google.common.collect.Lists;
+
+
 
 @Service
 public class GreetingServiceImpl implements GreetingService {
