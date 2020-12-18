@@ -5,7 +5,7 @@ import java.io.Serializable;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexName = "index")
+@Document(indexName = "classes", type = "greeting")
 public class Greeting implements Serializable {
 	
 	@Id

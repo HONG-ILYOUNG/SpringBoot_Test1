@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.model.Board;
 import com.example.demo.model.Greeting;
 import com.example.demo.repository.GreetingRepository;
 import com.google.common.collect.Lists;
@@ -24,7 +25,7 @@ public class GreetingServiceImpl implements GreetingService {
 
     @Override
     public Greeting findOne(String id) {
-        return repository.findOne(id);
+        return repository.findById(id).orElse(new Greeting());
     }
 
     @Override
@@ -34,7 +35,7 @@ public class GreetingServiceImpl implements GreetingService {
 
     @Override
     public Greeting update(Greeting greeting) {
-        Greeting persitedGreeting = repository.findOne(greeting.getId());
+        Greeting persitedGreeting = repository.findById(greeting.getId()).orElse(new Greeting());
         if(persitedGreeting == null) {
             return null;
         }
@@ -48,7 +49,7 @@ public class GreetingServiceImpl implements GreetingService {
 
     @Override
     public void delete(String id) {
-        repository.delete(id);
+        repository.deleteById(id);
     }{
 
 }

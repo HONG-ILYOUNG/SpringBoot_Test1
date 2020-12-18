@@ -1,5 +1,6 @@
 package com.example.demo.config;
 
+import java.io.IOException;
 import java.net.InetAddress;
 
 import org.elasticsearch.client.Client;
