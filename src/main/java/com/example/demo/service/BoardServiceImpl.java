@@ -9,8 +9,6 @@ import org.springframework.stereotype.Service;
 import com.example.demo.model.Board;
 import com.example.demo.repository.BoardRepository;
 
-
-
 @Service
 public class BoardServiceImpl implements BoardService {
  
